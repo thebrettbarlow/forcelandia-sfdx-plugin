@@ -15,17 +15,27 @@ This is a 40 minute workshop hosted at [Forcelandia](http://forcelandia.com) tha
 * 15 - 30 Minutes: Coding!
 * 30 - 40 Minutes: Demo time
 
-1. [Installation](#installation)
+1. [Installation and Stup](#installation-and-setup)
 1. [Exploring the Plugin](#exploring-the-plugin)
 1. [Workshop](#workshop)
 
-## Installation
+## Installation and Setup
 
-### 1. npm
+### 0. npm
 Make sure `npm` is installed
 
 ```bash
 brew install npm
+```
+
+### 1. Login to npm
+
+If you don't have an npm account, Brett will provide a shared account you can use. 
+
+If you do have npm, make sure you're logged in by running:
+
+```bash
+npm login
 ```
 
 ### 2. sfdx-cli
@@ -102,21 +112,21 @@ Create a repo (will prompt for GitHub login)
 hub create
 ```
 
-### 2. Initialize npm
+### 3. Initialize npm
 
-Make sure to set the `git repository` to a public repo.
+Make sure to set the `git repository` to the repo you just created
 
 ```bash
 npm init
 npm install
 ```
 
-### 3. Publish
+### 4. Publish
 ```bash
-yarn publish
+yarn publish --access public
 ```
 
-### 4. Link plugin for development
+### 5. Link plugin for development
 ```bash
 sfdx plugins:link
 sfdx plugins --core
@@ -147,7 +157,7 @@ existing command over as a starting place.
 
 ### 6. Publish new version
 ```bash
-yarn publish
+yarn publish --access public
 ```
 
 ### 7. Demo
