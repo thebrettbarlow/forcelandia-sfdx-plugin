@@ -11,8 +11,8 @@ _Salesforce Command Line Training Workshop at [Forcelandia](http://forcelandia.c
 This is a 40 minute workshop hosted at [Forcelandia](http://forcelandia.com) that is scheduled as follows:
 
 * 01 - 10 Minutes: Installation and Exploring the Plugin sections
-* 10 - 15 Minutes: Workshop steps 1-4
-* 15 - 30 Minutes: Coding!
+* 10 - 20 Minutes: Workshop steps 1-4
+* 20 - 30 Minutes: Coding!
 * 30 - 40 Minutes: Demo time
 
 1. [Installation and Stup](#installation-and-setup)
