@@ -149,7 +149,7 @@ existing command over as a starting place.
 * Add a filter to `recordtype:get`
 * Create a record and open that page
 
-### 6. Publish new version
+### 6. Publish
 ```bash
 yarn publish --access public
 ```
