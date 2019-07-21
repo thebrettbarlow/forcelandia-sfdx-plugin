@@ -8,6 +8,4 @@
 /dist
 /package-lock.json
 .idea
-.images
-.vscode
 .DS_Store

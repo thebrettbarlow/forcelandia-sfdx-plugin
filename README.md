@@ -22,7 +22,7 @@ This is a 40 minute workshop hosted at [Forcelandia](http://forcelandia.com) tha
 ## Installation and Setup
 
 ### 0. npm
-Make sure `npm` is installed
+Make sure `npm` is [installed](https://www.npmjs.com/get-npm)
 
 ```bash
 brew install npm
@@ -39,14 +39,14 @@ npm login
 ```
 
 ### 2. sfdx-cli
-Install the the base `sfdx-cli` via the command line (below) or [download](https://developer.salesforce.com/tools/sfdxcli)
+Make sure the base `sfdx-cli` is [installed](https://developer.salesforce.com/tools/sfdxcli)
 
 ```bash
 npm install --global sfdx-cli
 ```
 
 ### 3. yarn
-We'll be using `yarn` as a package manager
+We'll be using `yarn` as a package manager. Also get it [here](https://yarnpkg.com/lang/en/docs/install)
 
 ```bash
 brew install yarn
@@ -137,7 +137,7 @@ sfdx fl --help
 
 Time to get creative! Make a change to an existing command or add a command of your own!
 
-#### Tips on making changes
+### Tips on making changes
 
 To change an existing command, directly edit the TypeScript file you would like to change.
 
@@ -149,7 +149,7 @@ If you would like to add a command within a _new_ topic, add a folder within the
 data, recordtype and user). Create a new TypeScript file within this new folder. It may be helpful to copy and paste an 
 existing command over as a starting place.
 
-#### Need some inspiration? Here are a few ideas:
+### Need some inspiration? Here are a few ideas:
 
 * Display the top 10 Opportunities by Amount
 * Add a filter to `recordtype:get`
