@@ -135,16 +135,15 @@ If you would like to add a command within an existing topic (data, recordtype or
 TypeScript file within the appropriate folder. It may be helpful to copy and paste an existing command over as a
 starting place.
 
-If you would like to add a command within a _new_ topic, add a folder below the `fl` directory (at the same level as
+If you would like to add a command within a _new_ topic, add a folder within the `fl` directory (at the same level as
 data, recordtype and user). Create a new TypeScript file within this new folder. It may be helpful to copy and paste an 
 existing command over as a starting place.
 
 #### Need some inspiration? Here are a few ideas:
 
-* Change how the fields are displayed when running `user:get`
+* Display the top 10 Opportunities by Amount
 * Add a filter to `recordtype:get`
-* Add a command to get the top 10 opportunities by amount
-* blah
+* Create a record and open that page
 
 ### 6. Publish new version
 ```bash
