@@ -15,7 +15,7 @@ This is a 40 minute workshop hosted at [Forcelandia](http://forcelandia.com) tha
 * 20 - 30 Minutes: Coding!
 * 30 - 40 Minutes: Demo time
 
-1. [Installation and Stup](#installation-and-setup)
+1. [Installation and Setup](#installation-and-setup)
 1. [Exploring the Plugin](#exploring-the-plugin)
 1. [Workshop](#workshop)
 
