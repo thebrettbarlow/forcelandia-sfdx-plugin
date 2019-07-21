@@ -55,7 +55,7 @@ sfdx force:auth:web:login --setalias stage --instanceurl https://test.salesforce
 
 ### 5. forcelandia-sfdx-plugin
 ```bash
-sfdx plugins:install thebrettbarlow/forcelandia-sfdx-plugin
+echo 'y' | sfdx plugins:install thebrettbarlow/forcelandia-sfdx-plugin
 sfdx fl --help
 ```
 
