@@ -42,6 +42,7 @@ export default class DataSetValue extends SfdxCommand {
     const username = this.org.getUsername();
 
     let start = now();
+    this.ux.startSpinner('Processing');
 
     const records: any[] = await queryAllRecords(
       conn,

@@ -26,7 +26,7 @@ export default class AccountCopy extends SfdxCommand {
       char: 'l',
       description: 'limit the number of records to export',
     }),
-    target: flags.filepath({
+    destination: flags.filepath({
       char: 't',
       description: 'sfdx connection to copy places to',
       required: true,
@@ -65,7 +65,7 @@ export default class AccountCopy extends SfdxCommand {
     // }
 
     let start = now();
-    this.ux.startSpinner(`Copying ${this.flags.limit.toLocaleString()} Accounts to ${this.flags.target}`);
+    this.ux.startSpinner(`Copying ${this.flags.limit.toLocaleString()} Accounts to ${this.flags.destination}`);
 
     const fields = ['Name'];
     const accounts: Account[] = await queryAllRecords(
@@ -100,7 +100,7 @@ export default class AccountCopy extends SfdxCommand {
 
     await sfdxUpsert(
       <SfdxUpsertParams>{
-        username: this.flags.target,
+        username: this.flags.destination,
         sobjectType: 'Account',
         externalId: 'Id',
         csvFile: path,
