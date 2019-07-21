@@ -7,3 +7,6 @@
 /.nyc_output
 /dist
 /package-lock.json
+.idea
+.images
+.vscode
