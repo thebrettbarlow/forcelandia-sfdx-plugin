@@ -65,7 +65,7 @@ The `--help` command is your friend.
 This command will display which topics and commands are available in the plugin. 
 Running `--help` on a specific topic will display which commands are available 
 to run.
-```bash
+```
 $ sfdx fl:data --help
 commands for all the datas
 
