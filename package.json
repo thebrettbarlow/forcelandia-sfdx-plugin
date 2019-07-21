@@ -1,7 +1,7 @@
 {
-  "name": "@postmates/forcelandia-sfdx-plugin",
+  "name": "@forcelandia-2019/forcelandia-sfdx-plugin",
   "description": "salesforce command line training workshop at forcelandia",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "author": "Brett Barlow @thebrettbarlow",
   "dependencies": {
     "@oclif/command": "^1.5.12",
@@ -90,10 +90,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/postmates/forcelandia-sfdx-plugin.git"
+    "url": "git+https://github.com/thebrettbarlow/forcelandia-sfdx-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/postmates/forcelandia-sfdx-plugin/issues"
+    "url": "https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/issues"
   },
-  "homepage": "https://github.com/postmates/forcelandia-sfdx-plugin#readme"
+  "homepage": "https://github.com/thebrettbarlow/forcelandia-sfdx-plugin#readme"
 }
