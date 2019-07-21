@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/postmates/pm-sfdx-plugin/tree/master.svg?style=svg&circle-token=bfe48e8d7963016f7028f3b6aeaae5decf342da2)](https://circleci.com/gh/postmates/pm-sfdx-plugin/tree/master)
+[![CircleCI](https://circleci.com/gh/postmates/forcelandia-sfdx-plugin/tree/master.svg?style=svg&circle-token=bfe48e8d7963016f7028f3b6aeaae5decf342da2)](https://circleci.com/gh/postmates/forcelandia-sfdx-plugin/tree/master)
 
 # forcelandia-sfdx-plugin
 
@@ -55,7 +55,7 @@ sfdx force:auth:web:login --setalias stage --instanceurl https://test.salesforce
 
 ### 5. forcelandia-sfdx-plugin
 ```bash
-sfdx plugins:install @postmates/forcelandia-sfdx-plugin
+sfdx plugins:install thebrettbarlow/forcelandia-sfdx-plugin
 sfdx fl --help
 ```
 
@@ -84,7 +84,7 @@ COMMANDS
 
 ### 1. Clone the repo
 ```bash
-git clone postmates/forcelandia-sfdx-plugin
+git clone thebrettbarlow/forcelandia-sfdx-plugin
 cd forcelandia-sfdx-plugin
 ```
 
