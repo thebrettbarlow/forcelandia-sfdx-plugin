@@ -1,0 +1,99 @@
+{
+  "name": "@postmates/forcelandia-sfdx-plugin",
+  "description": "salesforce command line training workshop at forcelandia",
+  "version": "0.0.2",
+  "author": "Brett Barlow @thebrettbarlow",
+  "dependencies": {
+    "@oclif/command": "^1.5.12",
+    "@oclif/config": "^1.12.12",
+    "@oclif/errors": "^1.2.2",
+    "@oclif/parser": "^3.7.2",
+    "@salesforce/command": "^1.5.0",
+    "csv-parse": "^4.3.4",
+    "delay": "^4.2.0",
+    "json2csv": "^4.3.3",
+    "node": "^12.3.1",
+    "prompts": "^2.1.0",
+    "tslib": "1"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/plugin-help": "^2",
+    "@oclif/test": "^1",
+    "@salesforce/dev-config": "^1.1.4",
+    "@types/chai": "^4",
+    "@types/fs-extra": "^7.0.0",
+    "@types/jest": "^24.0.13",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "chai": "^4",
+    "globby": "^8",
+    "jest": "^24.8.0",
+    "mocha": "^5",
+    "nyc": "^13",
+    "sinon": "5",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^7",
+    "typescript": "^3.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    ".oclif.manifest.json",
+    "/lib",
+    "/messages"
+  ],
+  "keywords": [
+    "sfdx-plugin"
+  ],
+  "license": "MIT",
+  "oclif": {
+    "commands": "./lib/commands",
+    "topics": {
+      "fl": {
+        "description": "command line utilities for salesforce"
+      },
+      "fl:data": {
+        "description": "commands for all the datas"
+      },
+      "fl:recordtype": {
+        "description": "commands related to record types"
+      },
+      "fl:user": {
+        "description": "commands related to users"
+      }
+    },
+    "bin": "sfdx",
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "clean": "rm -f .oclif.manifest.json",
+    "lint": "tsc -p test --noEmit && tslint -p test -t stylish",
+    "postpublish": "yarn run clean; git push; git push --tags",
+    "prepare": "yarn run build && oclif-dev manifest",
+    "prepublishOnly": "yarn run build && oclif-dev manifest",
+    "preversion": "yarn run clean",
+    "test": "yarn run prepare && jest --runInBand",
+    "test:parallel": "yarn run prepare && jest",
+    "test:watch": "yarn run prepare && jest --watch --runInBand",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/postmates/forcelandia-sfdx-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/postmates/forcelandia-sfdx-plugin/issues"
+  },
+  "homepage": "https://github.com/postmates/forcelandia-sfdx-plugin#readme"
+}
