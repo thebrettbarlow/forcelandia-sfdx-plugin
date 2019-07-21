@@ -121,16 +121,10 @@ npm init
 npm install
 ```
 
-### 4. Publish
-```bash
-yarn publish --access public
-```
-
-### 5. Link plugin for development
+### 4. Link plugin for development
 ```bash
 sfdx plugins:link
 sfdx plugins --core
-sfdx fl --help
 ```
 
 ### 5. Make a change
