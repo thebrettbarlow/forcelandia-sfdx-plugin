@@ -1,5 +1,5 @@
 {
-  "name": "@postmates/forcelandia-sfdx-plugin",
+  "name": "@thebrettbarlow/forcelandia-sfdx-plugin",
   "description": "salesforce command line training workshop at forcelandia",
   "version": "0.0.2",
   "author": "Brett Barlow @thebrettbarlow",
