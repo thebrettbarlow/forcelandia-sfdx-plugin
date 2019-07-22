@@ -27,7 +27,7 @@ export default class AccountCopy extends SfdxCommand {
       description: 'limit the number of records to export',
     }),
     destination: flags.filepath({
-      char: 't',
+      char: 'd',
       description: 'sfdx connection to copy places to',
       required: true,
     }),
