@@ -1,7 +1,7 @@
 {
   "name": "@thebrettbarlow/forcelandia-sfdx-plugin",
   "description": "Salesforce Command Line Training Workshop at Forcelandia",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Brett Barlow @thebrettbarlow",
   "dependencies": {
     "@oclif/command": "^1.5.12",

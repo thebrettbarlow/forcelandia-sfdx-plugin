@@ -207,7 +207,7 @@ EXAMPLE
   sfdx fl:data:copy --sobjecttype Account --limit 100 --targetusername production --destination stage
 ```
 
-_See code: [src/commands/fl/data/copy.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/data/copy.ts)_
+_See code: [src/commands/fl/data/copy.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.7/src/commands/fl/data/copy.ts)_
 
 ## `sfdx fl:data:setvalue -q <string> -f <string> -v <string> [-n <string>] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -248,7 +248,7 @@ EXAMPLE
   Company" --targetusername stage
 ```
 
-_See code: [src/commands/fl/data/setvalue.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/data/setvalue.ts)_
+_See code: [src/commands/fl/data/setvalue.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.7/src/commands/fl/data/setvalue.ts)_
 
 ## `sfdx fl:data:upsert -s <string> -f <filepath> [-i <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -284,7 +284,7 @@ EXAMPLE
   sfdx fl:data:upsert --sobjecttype Account --externalid Id --file accounts_to_upsert.csv
 ```
 
-_See code: [src/commands/fl/data/upsert.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/data/upsert.ts)_
+_See code: [src/commands/fl/data/upsert.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.7/src/commands/fl/data/upsert.ts)_
 
 ## `sfdx fl:recordtype:get [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -311,7 +311,7 @@ EXAMPLE
   sfdx fl:recordtype:get
 ```
 
-_See code: [src/commands/fl/recordtype/get.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/recordtype/get.ts)_
+_See code: [src/commands/fl/recordtype/get.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.7/src/commands/fl/recordtype/get.ts)_
 
 ## `sfdx fl:user:get [-a] [-n <string>] [-p <string>] [-r <string>] [-s] [-o] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -363,7 +363,7 @@ EXAMPLES
   sfdx fl:user:get --active --outputcsv
 ```
 
-_See code: [src/commands/fl/user/get.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/user/get.ts)_
+_See code: [src/commands/fl/user/get.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.7/src/commands/fl/user/get.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
