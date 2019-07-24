@@ -8,7 +8,7 @@ const now = require('performance-now');
 export default class DataUpsert extends SfdxCommand {
   public static description = 'upsert data from a csv file';
   public static examples = [
-    'sfdx pm:data:upsert --sobjecttype Account --externalid Id --file accounts_to_upsert.csv',
+    'sfdx fl:data:upsert --sobjecttype Account --externalid Id --file accounts_to_upsert.csv',
   ];
   protected static flagsConfig = {
     sobjecttype: flags.string({

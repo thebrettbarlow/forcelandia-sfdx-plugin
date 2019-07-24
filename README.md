@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/postmates/forcelandia-sfdx-plugin/tree/master.svg?style=svg&circle-token=bfe48e8d7963016f7028f3b6aeaae5decf342da2)](https://circleci.com/gh/postmates/forcelandia-sfdx-plugin/tree/master)
+[![CircleCI](https://circleci.com/gh/thebrettbarlow/forcelandia-sfdx-plugin/tree/master.svg?style=svg&circle-token=bfe48e8d7963016f7028f3b6aeaae5decf342da2)](https://circleci.com/gh/thebrettbarlow/forcelandia-sfdx-plugin/tree/master)
 
 # forcelandia-sfdx-plugin
 

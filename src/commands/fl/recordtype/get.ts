@@ -4,7 +4,7 @@ import { sfdxQuery } from '../../../shared/queryUtil';
 export default class RecordTypeGet extends SfdxCommand {
   public static description = 'gets record type names and ids';
   public static examples = [
-    'sfdx pm:recordtype:get',
+    'sfdx fl:recordtype:get',
   ];
   protected static flagsConfig = {};
   protected static requiresUsername = true;

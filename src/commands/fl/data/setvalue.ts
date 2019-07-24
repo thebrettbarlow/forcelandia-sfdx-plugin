@@ -10,7 +10,7 @@ const now = require("performance-now");
 export default class DataSetValue extends SfdxCommand {
   public static description = 'sets a value into a field for all records returned by the query';
   public static examples = [
-    'sfdx pm:data:setvalue --query "select id, type from account where type != null limit 5" --field Type --value "Cool Company" --targetusername stage',
+    'sfdx fl:data:setvalue --query "select id, type from account where type != null limit 5" --field Type --value "Cool Company" --targetusername stage',
   ];
   protected static flagsConfig = {
     query: flags.string({

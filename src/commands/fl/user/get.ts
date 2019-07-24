@@ -5,13 +5,13 @@ import { sfdxQuery } from '../../../shared/queryUtil';
 export default class get extends SfdxCommand {
   public static description = 'gets users based on certain parameters';
   public static examples = [
-    'sfdx pm:user:get',
-    'sfdx pm:user:get --active',
-    'sfdx pm:user:get --active --name "john smith"',
-    'sfdx pm:user:get --active --profile admin',
-    'sfdx pm:user:get --active --userrole sales',
-    'sfdx pm:user:get --active --skinny',
-    'sfdx pm:user:get --active --outputcsv',
+    'sfdx fl:user:get',
+    'sfdx fl:user:get --active',
+    'sfdx fl:user:get --active --name "john smith"',
+    'sfdx fl:user:get --active --profile admin',
+    'sfdx fl:user:get --active --userrole sales',
+    'sfdx fl:user:get --active --skinny',
+    'sfdx fl:user:get --active --outputcsv',
   ];
   protected static flagsConfig = {
     active: flags.boolean({

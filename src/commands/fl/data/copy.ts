@@ -10,7 +10,7 @@ const now = require("performance-now");
 export default class AccountCopy extends SfdxCommand {
   public static description = 'copies data from production to another sfdx connection';
   public static examples = [
-    'sfdx pm:data:copy --sobjecttype Account --limit 100 --destination stage',
+    'sfdx fl:data:copy --sobjecttype Account --limit 100 --targetusername production --destination stage',
   ];
   protected static flagsConfig = {
     all: flags.boolean({
