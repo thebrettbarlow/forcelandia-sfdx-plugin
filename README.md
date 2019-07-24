@@ -161,24 +161,27 @@ If you have something working by the end, let Brett know and he'll demo it!
 ## All Available Commands
 
 <!-- commands -->
-* [`sfdx fl:data:copy -t <filepath> [-a] [-s <string>] [-l <number>] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-fldatacopy--t-filepath--a--s-string--l-number--d-directory--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+* [`sfdx fl:data:copy -d <filepath> [-a] [-s <string>] [-l <number>] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-fldatacopy--d-filepath--a--s-string--l-number--d-directory--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx fl:data:setvalue -q <string> -f <string> -v <string> [-n <string>] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-fldatasetvalue--q-string--f-string--v-string--n-string--d-directory--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx fl:data:upsert -s <string> -f <filepath> [-i <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-fldataupsert--s-string--f-filepath--i-string--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx fl:recordtype:get [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-flrecordtypeget--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 * [`sfdx fl:user:get [-a] [-n <string>] [-p <string>] [-r <string>] [-s] [-o] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-fluserget--a--n-string--p-string--r-string--s--o--d-directory--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
 
-## `sfdx fl:data:copy -t <filepath> [-a] [-s <string>] [-l <number>] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+## `sfdx fl:data:copy -d <filepath> [-a] [-s <string>] [-l <number>] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
 copies data from production to another sfdx connection
 
 ```
 USAGE
-  $ sfdx fl:data:copy -t <filepath> [-a] [-s <string>] [-l <number>] [-d <directory>] [-u <string>] [--apiversion 
+  $ sfdx fl:data:copy -d <filepath> [-a] [-s <string>] [-l <number>] [-d <directory>] [-u <string>] [--apiversion 
   <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
 
 OPTIONS
   -a, --all                                                                         if true, the script gets all
                                                                                     sobjects in the `sobjectTypes` array
+
+  -d, --destination=destination                                                     (required) sfdx connection to copy
+                                                                                    places to
 
   -d, --directory=directory                                                         [default: .] directory where you
                                                                                     would like the output to go
@@ -188,9 +191,6 @@ OPTIONS
 
   -s, --sobjecttype=sobjecttype                                                     name of the sobject to get. Required
                                                                                     if --all is false
-
-  -t, --destination=destination                                                     (required) sfdx connection to copy
-                                                                                    places to
 
   -u, --targetusername=targetusername                                               username or alias for the target
                                                                                     org; overrides default target org
@@ -204,10 +204,10 @@ OPTIONS
                                                                                     this command invocation
 
 EXAMPLE
-  sfdx pm:data:copy --sobjecttype Account --limit 100 --target stage
+  sfdx fl:data:copy --sobjecttype Account --limit 100 --targetusername production --destination stage
 ```
 
-_See code: [src/commands/fl/data/copy.ts](https://github.com/postmates/forcelandia-sfdx-plugin/blob/v0.0.5/src/commands/fl/data/copy.ts)_
+_See code: [src/commands/fl/data/copy.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/data/copy.ts)_
 
 ## `sfdx fl:data:setvalue -q <string> -f <string> -v <string> [-n <string>] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -244,11 +244,11 @@ OPTIONS
                                                                                     this command invocation
 
 EXAMPLE
-  sfdx pm:data:setvalue --query "select id, type from account where type != null limit 5" --field Type --value "Cool 
+  sfdx fl:data:setvalue --query "select id, type from account where type != null limit 5" --field Type --value "Cool 
   Company" --targetusername stage
 ```
 
-_See code: [src/commands/fl/data/setvalue.ts](https://github.com/postmates/forcelandia-sfdx-plugin/blob/v0.0.5/src/commands/fl/data/setvalue.ts)_
+_See code: [src/commands/fl/data/setvalue.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/data/setvalue.ts)_
 
 ## `sfdx fl:data:upsert -s <string> -f <filepath> [-i <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -281,10 +281,10 @@ OPTIONS
                                                                                     this command invocation
 
 EXAMPLE
-  sfdx pm:data:upsert --sobjecttype Account --externalid Id --file accounts_to_upsert.csv
+  sfdx fl:data:upsert --sobjecttype Account --externalid Id --file accounts_to_upsert.csv
 ```
 
-_See code: [src/commands/fl/data/upsert.ts](https://github.com/postmates/forcelandia-sfdx-plugin/blob/v0.0.5/src/commands/fl/data/upsert.ts)_
+_See code: [src/commands/fl/data/upsert.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/data/upsert.ts)_
 
 ## `sfdx fl:recordtype:get [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -308,10 +308,10 @@ OPTIONS
                                                                                     this command invocation
 
 EXAMPLE
-  sfdx pm:recordtype:get
+  sfdx fl:recordtype:get
 ```
 
-_See code: [src/commands/fl/recordtype/get.ts](https://github.com/postmates/forcelandia-sfdx-plugin/blob/v0.0.5/src/commands/fl/recordtype/get.ts)_
+_See code: [src/commands/fl/recordtype/get.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/recordtype/get.ts)_
 
 ## `sfdx fl:user:get [-a] [-n <string>] [-p <string>] [-r <string>] [-s] [-o] [-d <directory>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -354,16 +354,16 @@ OPTIONS
                                                                                     this command invocation
 
 EXAMPLES
-  sfdx pm:user:get
-  sfdx pm:user:get --active
-  sfdx pm:user:get --active --name "john smith"
-  sfdx pm:user:get --active --profile admin
-  sfdx pm:user:get --active --userrole sales
-  sfdx pm:user:get --active --skinny
-  sfdx pm:user:get --active --outputcsv
+  sfdx fl:user:get
+  sfdx fl:user:get --active
+  sfdx fl:user:get --active --name "john smith"
+  sfdx fl:user:get --active --profile admin
+  sfdx fl:user:get --active --userrole sales
+  sfdx fl:user:get --active --skinny
+  sfdx fl:user:get --active --outputcsv
 ```
 
-_See code: [src/commands/fl/user/get.ts](https://github.com/postmates/forcelandia-sfdx-plugin/blob/v0.0.5/src/commands/fl/user/get.ts)_
+_See code: [src/commands/fl/user/get.ts](https://github.com/thebrettbarlow/forcelandia-sfdx-plugin/blob/v0.0.6/src/commands/fl/user/get.ts)_
 <!-- commandsstop -->
 <!-- debugging-your-plugin -->
 # Debugging your plugin
