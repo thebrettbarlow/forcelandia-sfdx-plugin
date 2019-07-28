@@ -94,7 +94,7 @@ COMMANDS
 
 ### 1. Clone the repo
 ```bash
-git clone thebrettbarlow/forcelandia-sfdx-plugin
+git clone https://github.com/thebrettbarlow/forcelandia-sfdx-plugin
 cd forcelandia-sfdx-plugin
 ```
 
