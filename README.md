@@ -138,9 +138,7 @@ git remote set-url origin http://github.com/USERNAME/REPO_NAME
 git push origin master
 ```
 
-### 5. Initialize npm
-
-Make sure to set the `git repository` to the repo you just created
+### 5. Initialize and Install
 
 ```bash
 yarn init
