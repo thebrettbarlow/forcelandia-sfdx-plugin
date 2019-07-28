@@ -121,8 +121,8 @@ Create a repo (will prompt for GitHub login)
 # cd into your new directory from above first 
 cd new_directory_name
 
-hub create \ 
-    --description "Salesforce Command Line Training Workshop at Forcelandia" \ 
+hub create \
+    --description "Salesforce Command Line Training Workshop at Forcelandia" \
     --homepage "http://bit.ly/forcelandia-sfdx-plugin"
 ```
 
