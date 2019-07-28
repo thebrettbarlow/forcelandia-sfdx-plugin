@@ -21,14 +21,14 @@ This is a 40 minute workshop hosted at [Forcelandia](http://forcelandia.com) tha
 
 ## Installation and Setup
 
-### 0. node and npm
+### 1. node and npm
 Make sure `node` and `npm` is [installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ```bash
 brew install node
 ```
 
-### 1. Login to npm
+### 2. Login to npm
 
 If you don't have an npm account, Brett will provide a shared account you can use. 
 
@@ -38,27 +38,27 @@ If you do have npm, make sure you're logged in by running:
 npm login
 ```
 
-### 2. TypeScript
+### 3. TypeScript
 
 ```bash
 npm install -g typescript
 ```
 
-### 3. sfdx-cli
+### 4. sfdx-cli
 Make sure the base `sfdx-cli` is [installed](https://developer.salesforce.com/tools/sfdxcli)
 
 ```bash
 npm install --global sfdx-cli
 ```
 
-### 4. yarn
+### 5. yarn
 We'll be using `yarn` as a package manager. Also get it [here](https://yarnpkg.com/lang/en/docs/install)
 
 ```bash
 brew install yarn
 ```
 
-### 5. Authenticate
+### 6. Authenticate
 _production authentication command_
 ```bash
 sfdx force:auth:web:login --setalias production
@@ -69,7 +69,7 @@ _stage authentication command_
 sfdx force:auth:web:login --setalias stage --instanceurl https://test.salesforce.com
 ```
 
-### 6. forcelandia-sfdx-plugin
+### 7. forcelandia-sfdx-plugin
 ```bash
 echo 'y' | sfdx plugins:install thebrettbarlow/forcelandia-sfdx-plugin
 sfdx fl --help
