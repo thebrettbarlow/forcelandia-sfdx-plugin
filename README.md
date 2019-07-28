@@ -11,7 +11,7 @@ _Salesforce Command Line Training Workshop at [Forcelandia](http://forcelandia.c
 This is a 40 minute workshop hosted at [Forcelandia](http://forcelandia.com) that is scheduled as follows:
 
 * 01 - 10 Minutes: Installation and Exploring the Plugin sections
-* 10 - 20 Minutes: Workshop steps 1-4
+* 10 - 20 Minutes: Workshop steps 1-6
 * 20 - 30 Minutes: Coding!
 * 30 - 40 Minutes: Demo time
 
@@ -92,15 +92,15 @@ COMMANDS
 
 ## Workshop
 
-### 1. Clone the repo
+### 1. Clone the repo and provide a new directory name
+
 ```bash
-git clone https://github.com/thebrettbarlow/forcelandia-sfdx-plugin
-cd forcelandia-sfdx-plugin
+git clone https://github.com/thebrettbarlow/forcelandia-sfdx-plugin new_directory_name
 ```
 
 ### 2. Create a GitHub repo
 
-This can be done via the `hub` command below or within the GitHub UI
+This can be done via the `hub` command below or within the GitHub UI. I recommend using `hub` for this workshop
 
 If you don't have `hub`, try the command below or [other install methods](https://github.com/github/hub#installation)
 ```bash
@@ -109,10 +109,26 @@ brew install hub
 
 Create a repo (will prompt for GitHub login)
 ```bash
-hub create
+# cd into your new directory from above first 
+cd new_directory_name
+
+hub create --description "Salesforce Command Line Training Workshop at Forcelandia" --homepage "http://bit.ly/forcelandia-sfdx-plugin"
 ```
 
-### 3. Initialize npm
+### 3. Rename existing remote and add your own
+
+```bash
+git remote rename origin upstream
+git remote add origin https://github.com/USERNAME/REPO_NAME
+```
+
+### 4. Push to new remote
+
+```bash
+git push origin master
+```
+
+### 5. Initialize npm
 
 Make sure to set the `git repository` to the repo you just created
 
@@ -121,13 +137,13 @@ npm init
 npm install
 ```
 
-### 4. Link plugin for development
+### 6. Link plugin for development
 ```bash
 sfdx plugins:link
 sfdx plugins --core
 ```
 
-### 5. Make a change
+### 7. Make a change
 
 Time to get creative! Make a change to an existing command or add a command of your own!
 
@@ -149,12 +165,12 @@ existing command over as a starting place.
 * Add a filter to `recordtype:get`
 * Create a record and open that page
 
-### 6. Publish
+### 8. Publish
 ```bash
 yarn publish --access public
 ```
 
-### 7. Demo
+### 9. Demo
 
 If you have something working by the end, let Brett know and he'll demo it!
 
