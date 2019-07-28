@@ -126,11 +126,10 @@ hub create \
     --homepage "http://bit.ly/forcelandia-sfdx-plugin"
 ```
 
-### 3. Rename existing remote and add your own
+### 3. Update origin's url
 
 ```bash
-git remote rename origin upstream
-git remote add origin https://github.com/USERNAME/REPO_NAME
+git remote set-url origin http://github.com/USERNAME/REPO_NAME
 ```
 
 ### 4. Push to new remote
@@ -144,8 +143,8 @@ git push origin master
 Make sure to set the `git repository` to the repo you just created
 
 ```bash
-npm init
-npm install
+yarn init
+yarn install
 ```
 
 ### 6. Link plugin for development
