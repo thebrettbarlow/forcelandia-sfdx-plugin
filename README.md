@@ -21,6 +21,9 @@ This is a 40 minute workshop hosted at [Forcelandia](http://forcelandia.com) tha
 
 ## Installation and Setup
 
+Let's do some initial setup to prepare our computers for development. If you run 
+into any strange errors, Salesforce covers some of this in their setup article [here](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_plugins.meta/sfdx_cli_plugins/cli_plugins_generate_prepare.htm).
+
 ### 1. node and npm
 Make sure `node` and `npm` is [installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
@@ -41,21 +44,21 @@ npm login
 ### 3. TypeScript
 
 ```bash
-npm install -g typescript
+npm install --global typescript
 ```
 
-### 4. sfdx-cli
+### 4. yarn
+We'll be using `yarn` as a package manager. Also get it [here](https://yarnpkg.com/lang/en/docs/install)
+
+```bash
+npm install --global yarn
+```
+
+### 5. sfdx-cli
 Make sure the base `sfdx-cli` is [installed](https://developer.salesforce.com/tools/sfdxcli)
 
 ```bash
 npm install --global sfdx-cli
-```
-
-### 5. yarn
-We'll be using `yarn` as a package manager. Also get it [here](https://yarnpkg.com/lang/en/docs/install)
-
-```bash
-brew install yarn
 ```
 
 ### 6. Authenticate
