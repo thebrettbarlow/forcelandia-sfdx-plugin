@@ -38,21 +38,27 @@ If you do have npm, make sure you're logged in by running:
 npm login
 ```
 
-### 2. sfdx-cli
+### 2. TypeScript
+
+```bash
+npm install -g typescript
+```
+
+### 3. sfdx-cli
 Make sure the base `sfdx-cli` is [installed](https://developer.salesforce.com/tools/sfdxcli)
 
 ```bash
 npm install --global sfdx-cli
 ```
 
-### 3. yarn
+### 4. yarn
 We'll be using `yarn` as a package manager. Also get it [here](https://yarnpkg.com/lang/en/docs/install)
 
 ```bash
 brew install yarn
 ```
 
-### 4. Authenticate
+### 5. Authenticate
 _production authentication command_
 ```bash
 sfdx force:auth:web:login --setalias production
@@ -63,7 +69,7 @@ _stage authentication command_
 sfdx force:auth:web:login --setalias stage --instanceurl https://test.salesforce.com
 ```
 
-### 5. forcelandia-sfdx-plugin
+### 6. forcelandia-sfdx-plugin
 ```bash
 echo 'y' | sfdx plugins:install thebrettbarlow/forcelandia-sfdx-plugin
 sfdx fl --help
