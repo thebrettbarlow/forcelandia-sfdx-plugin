@@ -21,11 +21,11 @@ This is a 40 minute workshop hosted at [Forcelandia](http://forcelandia.com) tha
 
 ## Installation and Setup
 
-### 0. npm
-Make sure `npm` is [installed](https://www.npmjs.com/get-npm)
+### 0. node and npm
+Make sure `node` and `npm` is [installed](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 ```bash
-brew install npm
+brew install node
 ```
 
 ### 1. Login to npm
@@ -112,7 +112,9 @@ Create a repo (will prompt for GitHub login)
 # cd into your new directory from above first 
 cd new_directory_name
 
-hub create --description "Salesforce Command Line Training Workshop at Forcelandia" --homepage "http://bit.ly/forcelandia-sfdx-plugin"
+hub create \ 
+    --description "Salesforce Command Line Training Workshop at Forcelandia" \ 
+    --homepage "http://bit.ly/forcelandia-sfdx-plugin"
 ```
 
 ### 3. Rename existing remote and add your own
